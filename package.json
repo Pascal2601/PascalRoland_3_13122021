@@ -1,0 +1,22 @@
+{
+  "name": "omyfood",
+  "version": "1.0.0",
+  "description": "projet openclassrom 3 \"ohmyfood\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pascal2601/PascalRoland_3_13122021.git"
+  },
+  "author": "Pascal Roland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pascal2601/PascalRoland_3_13122021/issues"
+  },
+  "homepage": "https://github.com/Pascal2601/PascalRoland_3_13122021#readme",
+  "devDependencies": {
+    "sass": "^1.45.1"
+  }
+}
