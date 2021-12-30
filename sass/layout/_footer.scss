@@ -1,0 +1,30 @@
+@use "../utils/variables";
+
+/* Footer */
+
+footer{
+    background-color: variables.$medium-black;
+    color: variables.$white;
+    padding: 1rem 2rem;
+    h2 {
+        font-family: variables.$font-title;
+        font-weight: 500;
+        padding: 1rem 0;
+    }
+    ul {
+        padding: 0.2rem 0;
+        li {
+            font-family: variables.$font-primary;
+            margin: 0 0 0.5rem;
+        i {
+            font-size: 0.8rem;
+            margin-right: 0.8rem;
+        
+        }
+        i.fas.fa-hands-helping {
+           margin-right: 0.5rem;
+       }
+       
+        }
+    }
+}

@@ -27,3 +27,17 @@ a {
 h1 {
   font-weight: 500;
 }
+
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+ol {
+  padding: 0 1rem;
+}
+
+li {
+  list-style-type: none;
+}

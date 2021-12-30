@@ -20,7 +20,7 @@
    
   text-align: center;
     background-color: variables.$grey;
-    padding-bottom: 40px;
+    padding-bottom: 3rem;
     
     &__title {
         font-size: 2rem;
@@ -37,6 +37,115 @@
     .header__button {
         @include mixins.button;
       
-     }
-  
+     }  
 }
+
+/* Fonctionnement */
+
+.fonctionnement {
+    counter-reset: numerotation;
+    margin-bottom: 5rem;
+    padding: 0 1.25rem;
+    h2 {
+        padding: 3.5rem 0 2rem 0;
+    }
+        & ol {
+            display: flex;
+            gap: 2rem;
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+        & li {
+            font-weight: bold;
+            font-size: 17px;
+            position: relative;
+            background-color: variables.$grey;
+            padding: 1.8rem 2rem;
+            border-radius: 1.5rem;
+            flex-grow: 1;
+            @include mixins.box-shadow;
+        &::before {
+            content: "" counter(numerotation);
+            counter-increment: numerotation;
+            color: variables.$white;
+            background-color: variables.$primary;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            bottom: 50%;
+            left: -0.8rem;
+            transform: translateY(50%);
+        }
+        &:hover {
+            @include mixins.fonctionnement;
+        }
+        & i.fas {
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            color: variables.$medium-grey;
+        }
+        } 
+}
+
+/* Restaurants */
+.restaurants {
+    background-color: variables.$grey;
+    margin-bottom: 4rem;
+    padding: 0 1.2rem;
+    h2 {
+        padding: 3.8rem 0 1.6rem 0;
+    }
+
+    &__conteneur {
+        display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            &__cards {
+                @include mixins.restaurants;
+                border-radius: 1rem;
+                position: relative;
+                &__flag {
+                   &::before {
+                        position: absolute;
+                        content: "Nouveau";
+                        height: 2rem;
+                        width: 5rem;
+                        background-color: variables.$tertiary;
+                        color: darken($color: variables.$tertiary, $amount: 35%);
+                        display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    right: 1rem;
+                    top: 1rem;
+                    }
+                }
+                &__image {
+                    height: 15rem;
+                    background-size: cover;
+                    border-radius: 1rem 1rem 0 0;                  
+                }
+                @include mixins.images;
+                &__description {
+                    position: relative;
+                    h3 {
+                        padding: 0.5rem 1rem;
+                    }
+                    p{
+                        padding: 0 1rem 1rem;
+                    }
+                    &-anim {
+                        @include mixins.heart;
+                    }
+                }           
+        }
+    }
+   
+}
+
