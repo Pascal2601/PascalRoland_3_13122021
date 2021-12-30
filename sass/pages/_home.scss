@@ -1,0 +1,42 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+/* Location */
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.7rem;
+    background-color: variables.$dark-grey;
+    text-align: center;
+    padding: 0.5rem;
+    & i {
+        font-size: 1.5rem;
+    }
+}
+
+.presentation {
+   
+  text-align: center;
+    background-color: variables.$grey;
+    padding-bottom: 40px;
+    
+    &__title {
+        font-size: 2rem;
+        margin: 0;
+        padding-top: 2.5rem;
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        color: variables.$medium-black;
+        padding-bottom: 1rem;
+    }
+
+    .header__button {
+        @include mixins.button;
+      
+     }
+  
+}

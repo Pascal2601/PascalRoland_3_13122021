@@ -2,7 +2,9 @@
 /* import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
-/*Général*/
+/* Fonts */
+/* Color */
+/* Général */
 *,
 ::before,
 ::after {
@@ -11,7 +13,179 @@
 
 body {
   margin: 0px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+/* loader */
+@keyframes loader {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  94% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  95% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  96% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  98% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* button */
+@keyframes button {
+  0% {
+    background: -webkit-linear-gradient(#9356DC, #ff79da);
+    filter: brightness(0.9);
+  }
+  100% {
+    background: -webkit-linear-gradient(30deg, #ff79da, #9356DC 80%);
+  }
+}
+/* loader */
+.spinner {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  z-index: 90;
+  transform-origin: top;
+  animation: loader 1400ms ease-in-out 1s forwards;
+}
+.spinner__contain {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  background-color: #f6f6f6;
+  margin: auto;
+}
+.spinner__contain__circle {
+  position: absolute;
+  margin: auto;
+  width: 255px;
+  height: 255px;
+  border-bottom: 5px solid #9356DC;
+  border-top: 5px solid #ff79da;
+  border-radius: 50%;
+  z-index: 1;
+  animation: turn 1s linear 0ms infinite;
+}
+.spinner__contain .text {
+  color: #000000;
+  text-shadow: 3px 3px #9356DC, 3px 0px 3px #ff79da, 3px 4px 6px #99E2D0;
+  font-size: 35px;
+  font-family: "Shrikhand", arial, sans-serif;
+  font-weight: 900;
+  z-index: 3;
+  text-align: center;
+}
+
+/* header */
+.header {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
+  padding: 2rem 0rem 1rem 0rem;
+  position: relative;
+}
+.header__title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.header__img {
+  width: 220px;
+}
+
+/* box-shadow */
+/* button */
+/* Location */
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.7rem;
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 0.5rem;
+}
+.location i {
+  font-size: 1.5rem;
+}
+
+.presentation {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding-bottom: 40px;
+}
+.presentation__title {
+  font-size: 2rem;
+  margin: 0;
+  padding-top: 2.5rem;
+}
+.presentation__text {
+  font-size: 1.2rem;
+  color: #353535;
+  padding-bottom: 1rem;
+}
+.presentation .header__button {
+  cursor: pointer;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 300;
+  background: -webkit-linear-gradient(#9356DC, #ff79da);
+  box-shadow: 10px 10px 20px #bcbcbc;
+}
+.presentation .header__button:hover {
+  box-shadow: 10px 10px 20px #565656;
+}
+.presentation .header__button p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 0.1rem 1.5rem;
+}
+.presentation .header__button:hover {
+  animation: button 1s ease forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+@use "../utils/variables";
+
+
+/* box-shadow */
+@mixin box-shadow {
+    box-shadow: 10px 10px 20px darken(#efefef, 20%);
+    &:hover {
+        box-shadow: 10px 10px 20px darken(#efefef, 60%);
+    }
+}
+
+/* button */
+
+@mixin button {
+    cursor: pointer;
+    border-radius: 2rem;
+    border: none;
+    font-weight: 300;
+    background: -webkit-linear-gradient(variables.$primary, variables.$secondary) ;
+   
+    @include box-shadow;
+    
+    p {
+        color: variables.$withe;
+        font-size: 1.2rem;
+        padding: 0.1rem 1.5rem;
+        
+    }
+    &:hover {
+        animation: button 1s ease forwards;
+    }
+}
+

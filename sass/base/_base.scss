@@ -1,9 +1,11 @@
+@use "../utils/variables";
+
 /* import fonts */
 
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 
-/*Général*/
+/* Général */
 
 *,
 ::before,
@@ -13,5 +15,15 @@
 
 body {
     margin: 0px;
-    font-family: "Roboto", sans-serif;
+    font-family: variables.$font-primary;
+   
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-weight: 500;
 }

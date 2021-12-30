@@ -1,0 +1,66 @@
+@use "../utils/variables";
+
+/* loader */
+
+.spinner {
+    width: 100%;
+    height: 100%;
+    background-color: variables.$grey;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: 90;
+    transform-origin: top;
+    animation: loader 1400ms ease-in-out 1s forwards;
+    &__contain {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+        background-color: variables.$grey;
+        margin: auto;
+        &__circle {
+            position: absolute;
+            margin: auto;
+            width: 255px;
+            height: 255px;
+            border-bottom: 5px solid variables.$primary;
+            border-top: 5px solid variables.$secondary;
+            border-radius: 50%;
+            z-index: 1;
+            animation: turn 1s linear 0ms infinite;
+        }
+        & .text {
+            color: variables.$black;
+            text-shadow: 3px 3px variables.$primary, 3px 0px 3px variables.$secondary, 3px 4px 6px variables.$tertiary;
+            font-size: 35px;
+            font-family: variables.$font-title;
+            font-weight: 900;
+            z-index: 3;
+            text-align: center;
+        }
+    }
+}
+
+/* header */
+
+.header {
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 35%);
+    padding: 2rem 0rem 1rem 0rem;
+    position: relative;
+    &__title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    &__img {
+        width: 220px;
+    }
+}
