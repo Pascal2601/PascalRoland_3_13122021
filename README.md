@@ -4,4 +4,4 @@
 
 PostCSS, Autoprefixer, CSSNano
 
-assets/capture/exemple.png?raw=true
+![Alt text](/assets/capture/exemple.png?raw=true "Capture d'ecran")
