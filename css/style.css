@@ -371,16 +371,16 @@ li {
   border-radius: 1rem 1rem 0 0;
 }
 .restaurants__conteneur__cards__image-1 {
-  background-image: url("../../assets/restaurants/card-1.jpg");
+  background-image: url("../assets/restaurants/card-1.jpg");
 }
 .restaurants__conteneur__cards__image-2 {
-  background-image: url("../../assets/restaurants/card-2.jpg");
+  background-image: url("../assets/restaurants/card-2.jpg");
 }
 .restaurants__conteneur__cards__image-3 {
-  background-image: url("../../assets/restaurants/card-3.jpg");
+  background-image: url("../assets/restaurants/card-3.jpg");
 }
 .restaurants__conteneur__cards__image-4 {
-  background-image: url("../../assets/restaurants/card-4.jpg");
+  background-image: url("../assets/restaurants/card-4.jpg");
 }
 .restaurants__conteneur__cards__description {
   position: relative;

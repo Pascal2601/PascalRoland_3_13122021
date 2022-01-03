@@ -41,7 +41,7 @@
 @mixin images {
     @for $i from 1 to 5 {
         &__image-#{$i} {
-            background-image: url("../../assets/restaurants/card-#{$i}.jpg");
+            background-image: url("../assets/restaurants/card-#{$i}.jpg");
         }
         
     }
