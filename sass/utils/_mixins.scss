@@ -145,3 +145,14 @@
         }
         
     }
+
+    @mixin title-restaurants {
+        position: relative;
+        padding: 2rem 1rem;
+        font-size: 2rem;
+        font-weight: 300;
+        font-family: variables.$font-title;
+       
+        
+        
+    }

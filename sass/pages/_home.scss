@@ -35,6 +35,8 @@
     }
 
     .header__button {
+        margin: auto;
+        width: 16rem;
         @include mixins.button;
       
      }  
@@ -94,8 +96,7 @@
 /* Restaurants */
 .restaurants {
     background-color: variables.$grey;
-    margin-bottom: 4rem;
-    padding: 0 1.2rem;
+    padding: 0 1.2rem 6rem;
     h2 {
         padding: 3.8rem 0 1.6rem 0;
     }
@@ -128,7 +129,9 @@
                 }
                 &__image {
                     height: 15rem;
-                    background-size: cover;
+                    background-size:cover;
+                    background-position: center;
+                    
                     border-radius: 1rem 1rem 0 0;                  
                 }
                 @include mixins.images;

@@ -4,7 +4,8 @@
   "description": "projet openclassrom 3 \"ohmyfood\"",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss css/style.css"
+    "sass": "sass --watch sass/main.scss css/style.css",
+    "postcss": "postcss css/style.css -u autoprefixer cssnano -o css/style.min.css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/Pascal2601/PascalRoland_3_13122021#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.1",
+    "cssnano": "^5.0.14",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.45.1"
   }
 }

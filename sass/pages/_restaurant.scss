@@ -1,3 +1,7 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+/* page restaurants */
 header {
     padding: 2rem 0rem 1rem 0rem;
     i.fas {
@@ -7,5 +11,131 @@ header {
         top: 50px;
         font-size: 1.5rem;
         transform: translateY(-50%);
+    }
+}
+
+.restaurant {
+    img {
+        margin-bottom: -30px;
+        max-height: 300px;
+        width: 100%;
+        object-fit: cover;
+        background-position: center;
+    }
+    &__title {
+        padding: 1rem 1rem;
+        background-color: variables.$grey;
+        border-radius: 30px 30px 0 0;
+        position: relative;
+        h2 {
+           @include mixins.title-restaurants;
+        }
+        &__anim {
+            bottom: 10px;
+            @include mixins.heart;
+        }
+    }
+    
+}
+
+/* Menu */
+.menu {
+    background-color: variables.$grey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+    &__category {
+        margin: 0.5rem 0.5rem;
+        overflow: hidden;
+        h3 {
+            text-transform: uppercase;
+            font-weight: 400;
+            position: relative;
+            margin: 0 0 0 1.5rem;
+            padding-bottom: 0.5rem;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                height: 0.25rem;
+                width: 3rem;
+                background-color: variables.$tertiary;
+                display: inline-block;
+                top: 1.5rem;
+                left: 0;
+            }
+        }
+        &__content {
+            display: flex;
+            background-color: variables.$white;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin: 1rem;
+            box-shadow: 7px 5px 8px darken(#efefef, 20%);
+            animation: animat-menu .7s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            transform: scale(0);
+            &__plat {
+                padding: 0.5rem 0 0.5rem 1rem;
+                   overflow: hidden;
+            & h4,
+               p {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+            }
+            }
+            &__price {
+                margin-left: auto;
+                font-weight: 900;
+                padding: 1rem;
+                display: flex;
+                align-items: flex-end;
+            }
+            &__check {
+                display: grid;
+                place-items: center;
+                background-color: variables.$tertiary;
+                flex-shrink: 0;
+                margin-right: -4rem;
+                width: 4rem;
+                transition: all 0.5s;
+                & i.fas {
+                    display: grid;
+                    place-items: center;
+                   background: variables.$white;
+                   border-radius: 50px;
+                   height: 2rem;
+                   width: 2rem;
+                   color: variables.$tertiary;
+                   
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                .menu__category__content__check {
+                    margin-right: 0;
+                }
+                i{
+                    transform: rotate(360deg);
+                    transition-duration: .9s;
+                }
+            }
+        }
+    }
+    .menu__button {
+        margin: 40px auto;
+    text-align: center;
+    @media (min-width: 768px){
+        grid-column: 2;
+    }      
+        @include mixins.button;   
+        
+        
     }
 }

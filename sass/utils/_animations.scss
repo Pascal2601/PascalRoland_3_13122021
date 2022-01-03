@@ -65,3 +65,25 @@
         background: -webkit-linear-gradient(30deg,variables.$secondary, variables.$primary 80%);
     }
 }
+
+/* Menu */
+@keyframes animat-menu {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    
+}
+
+@for $i from 0 to 9 {
+    .menu__category__content.delay-#{$i} {
+        animation-delay: #{calc($i / 10)}s;
+    }
+    }
