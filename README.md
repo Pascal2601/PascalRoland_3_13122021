@@ -4,4 +4,4 @@
 
 PostCSS, Autoprefixer, CSSNano
 
-(assets/capture/exemple.png?raw=true)
+assets/capture/exemple.png?raw=true
